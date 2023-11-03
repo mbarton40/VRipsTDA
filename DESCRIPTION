@@ -1,11 +1,12 @@
 Package: VRipsTDA
 Type: Package
-Title: Creates Veitoris-Rips Complex Images (Both Animated and Static)
+Title: Create Veitoris-Rips Complex Images (Animated or Static)
 Version: 0.1.0
 Author: Matthew Barton
-Maintainer: The package maintainer <matt.barton360@gmail.com>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Maintainer: Matthew Barton <matt.barton360@gmail.com>
+Description: The goal of 'VRipsTDA' is to allow data analyists to visualize
+Veitoris-Rips Complexes with 2-D data both via static images and animated HTML
+files.
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
