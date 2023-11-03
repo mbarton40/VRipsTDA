@@ -1,3 +1,19 @@
+#' Create animated Vietoris-Rips complexes
+#' @description [aniVRips()] takes the input of a dataframe with two columns, 
+#' calculates the persistence homology, and creates an HTML animation showing 
+#' the formation of the complex over tau.
+#' 
+#' @param df A data frame with two columns to create the Vietoris-Rips from
+#' @param framerate The number of frames you want the animation to use
+#' @param extra_thresh The additional threshold for the function to use when graphing the complex. This adjusts the bounds of the graph.
+#' @param inc_barcode If [TRUE], the animation include the persistence barcode plot.
+#' @param filename The file name of the .html file.
+#' @param title The title of the .html file.
+#' @param description The description of the animation.
+#'
+#' @return An HTML file and its corresponding plots.
+#' @export
+#'
 aniVRips <- function(df, framerate, extra_thresh = 0.25, inc_barcode = FALSE, filename = "VRComplexAni",
                      title = "Animation of V-R Complex over Tau", 
                      description = "This animation represents the creation of the V-R complex of some set \n
