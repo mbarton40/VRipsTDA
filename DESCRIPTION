@@ -1,6 +1,6 @@
 Package: VRipsTDA
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Creates Veitoris-Rips Complex Images (Both Animated and Static)
 Version: 0.1.0
 Author: Matthew Barton
 Maintainer: The package maintainer <matt.barton360@gmail.com>
