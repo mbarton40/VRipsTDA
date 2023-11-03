@@ -17,3 +17,4 @@ Imports:
     R.devices,
     TDA,
     TDAstats
+RoxygenNote: 7.2.3
