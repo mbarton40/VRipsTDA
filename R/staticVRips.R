@@ -10,18 +10,9 @@
 #' @param inc_barcode If [TRUE], the image includes the persistence barcode plot.
 #' @param png If [TRUE], the png of the output is saved in the current directory.
 #' @param filename The name of the png file.
-#' @param ... Addtional parameters that can be passed through `ggsave()`
+#' @param ... Additional parameters that can be passed through `ggsave()`
 #'
 #' @return A plot of the Vietoris-Rips complex with given value tau and the barcode plot.
-#' 
-#' @examples
-#' # Test data and an example
-#' ex_data2_x <- c(-2, 0, 0, 2)
-#' ex_data2_y <- c(0, 1, -1, 0)
-#' ex_data2 <- tibble(ex_data2_x, ex_data2_y)
-#' colnames(ex_data2) <- c('Boop', 'Bop')
-#' 
-#' staticVRips(ex_data2, tau = 1.2, inc_barcode = TRUE)
 #' 
 #' @export
 #'
