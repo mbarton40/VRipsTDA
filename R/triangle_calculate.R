@@ -1,6 +1,20 @@
+#' Find triangles between three points
+#'
+#' @description [trianglecalculate()] is a function to calculate triangles between three points.
+#' This is a helper function for [aniVRips()] and [staticVRips()]
+#' 
+#' @param df A dataframe with two columns
+#' @param r A radial distance to calculate if triangles are formed.
+#'
+#' @return A dataframe with three columns x, y, and group where group is the indicator
+#' of what triangle the points are apart of.
+#' @export
+#'
 triangle_calculate <- function(df, r){
   
   triangles <- data.frame()
+  
+  colnames(df) <- c('x', 'y')
   
   group_counter <- 1
   groups <- data.frame(x = numeric(0), y = numeric(0), group = numeric(0))

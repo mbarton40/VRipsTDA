@@ -1,3 +1,11 @@
+#' Find intersections of circles given a value of tau
+#'
+#' @param df A dataframe with two columns
+#' @param tau A radial distance to calculate if the circles intersect.
+#'
+#' @return A dataframe of intersections given tau.
+#' @export
+#'
 intersection <- function(df, tau){
   
   intersections <- data.frame()

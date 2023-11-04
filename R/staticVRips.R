@@ -1,3 +1,20 @@
+#' Create static Vietoris-Rips complexes
+#'
+#' @description [staticVRips()] takes the input of a dataframe with two columns, calculates the persistence homology, 
+# and creates a graph of the complex given a value of tau. This can also show the current barcode
+# and create a png of the complex.
+#' 
+#' @param df A data frame with two columns to create the Vietoris-Rips from.
+#' @param tau A value of to compute the Vietoris-Rips for.
+#' @param extra_thresh The additional threshold for the function to use when graphing the complex. This adjusts the bounds of the graph.
+#' @param inc_barcode If [TRUE], the image includes the persistence barcode plot.
+#' @param png If [TRUE], the png of the output is saved in the current directory.
+#' @param filename The name of the png file.
+#' @param ... Addtional parameters that can be passed through [ggsave()]
+#'
+#' @return A plot of the Vietoris-Rips complex with given value tau and the barcode plot.
+#' @export
+#'
 staticVRips <- function(df, tau, extra_thresh = 0.25, inc_barcode = FALSE,
                         png = FALSE, filename = "VRComplexStatic_plot",...){
   

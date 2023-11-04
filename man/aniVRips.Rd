@@ -12,7 +12,7 @@ aniVRips(
   filename = "VRComplexAni",
   title = "Animation of V-R Complex over Tau",
   description =
-    "This animation represents the creation of the V-R complex of some set \\n\\n                                      of data. Very cool!"
+    "This animation represents the creation of the V-R complex of some set \\n of data. Very cool!"
 )
 }
 \arguments{
@@ -22,7 +22,7 @@ aniVRips(
 
 \item{extra_thresh}{The additional threshold for the function to use when graphing the complex. This adjusts the bounds of the graph.}
 
-\item{inc_barcode}{If [TRUE], the animation include the persistence barcode plot.}
+\item{inc_barcode}{If [TRUE], the animation includes the persistence barcode plot.}
 
 \item{filename}{The file name of the .html file.}
 
