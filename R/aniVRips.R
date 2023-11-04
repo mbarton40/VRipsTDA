@@ -14,6 +14,8 @@
 #' @return An HTML file and its corresponding plots.
 #' @export
 #'
+#' 
+#'
 aniVRips <- function(df, framerate, extra_thresh = 0.25, inc_barcode = FALSE, filename = "VRComplexAni",
                      title = "Animation of V-R Complex over Tau", 
                      description = "This animation represents the creation of the V-R complex of some set \n of data. Very cool!"){

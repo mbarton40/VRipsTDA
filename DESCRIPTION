@@ -4,7 +4,7 @@ Title: Create Veitoris-Rips Complex Images (Animated or Static)
 Version: 1.0.0
 Author: Matthew Barton
 Maintainer: Matthew Barton <matt.barton360@gmail.com>
-Description: The goal of 'VRipsTDA' is to allow data analyists to visualize Veitoris-Rips Complexes with 2-D data both via static images and animated HTML files.
+Description: The goal of 'VRipsTDA' is to allow data analysts to visualize Veitoris-Rips Complexes with 2-D data both via static images and animated HTML files.
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true

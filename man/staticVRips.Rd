@@ -31,6 +31,14 @@ staticVRips(
 }
 \value{
 A plot of the Vietoris-Rips complex with given value tau and the barcode plot.
+
+#' @examples
+# ex_data2_x <- c(-2, 0, 0, 2)
+ex_data2_y <- c(0, 1, -1, 0)
+ex_data2 <- tibble(ex_data2_x, ex_data2_y)
+colnames(ex_data2) <- c('Boop', 'Bop')
+
+staticVRips(ex_data2, tau = 1.2, inc_barcode = TRUE)
 }
 \description{
 [staticVRips()] takes the input of a dataframe with two columns, calculates the persistence homology,
