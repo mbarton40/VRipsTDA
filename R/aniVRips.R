@@ -1,5 +1,5 @@
 #' Create animated Vietoris-Rips complexes
-#' @description [aniVRips()] takes the input of a dataframe with two columns, 
+#' @description `aniVRips()`` takes the input of a dataframe with two columns, 
 #' calculates the persistence homology, and creates an HTML animation showing 
 #' the formation of the complex over tau.
 #' 
