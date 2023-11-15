@@ -1,4 +1,5 @@
 #' Create animated Vietoris-Rips complexes
+#' 
 #' @description [aniVRips()] takes the input of a dataframe with two columns, 
 #' calculates the persistence homology, and creates an HTML animation showing 
 #' the formation of the complex over tau.
@@ -12,13 +13,23 @@
 #' @param description The description of the animation.
 #'
 #' @return An HTML file and its corresponding plots.
-#' @export
-#'
 #' 
+#' @import animation
+#' @import dplyr
+#' @import ggforce
+#' @import ggplot2
+#' @importFrom gridExtra grid.arrange
+#' @import TDA
+#' @import TDAstats
+#' 
+#' @export
 #'
 aniVRips <- function(df, framerate, extra_thresh = 0.25, inc_barcode = FALSE, filename = "VRComplexAni",
                      title = "Animation of V-R Complex over Tau", 
-                     description = "This animation represents the creation of the V-R complex of some set \n of data. Very cool!"){
+                     description = 
+                       "This animation represents the creation of the V-R complex of some set of data. Very cool!"){
+  birth=death=xstart=ystart=xend=yend=x=y=group=NULL
+  
   ph <- calculate_homology(df)
   
   ph_df <- as.data.frame(ph)

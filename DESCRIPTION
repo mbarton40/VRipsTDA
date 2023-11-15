@@ -12,6 +12,7 @@ Imports:
     animation,
     dplyr,
     ggforce,
+    ggplot2,
     gridExtra,
     R.devices,
     TDA,

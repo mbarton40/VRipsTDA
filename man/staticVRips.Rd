@@ -27,7 +27,7 @@ staticVRips(
 
 \item{filename}{The name of the png file.}
 
-\item{...}{Addtional parameters that can be passed through `ggsave()`}
+\item{...}{Additional parameters that can be passed through `ggsave()`}
 }
 \value{
 A plot of the Vietoris-Rips complex with given value tau and the barcode plot.

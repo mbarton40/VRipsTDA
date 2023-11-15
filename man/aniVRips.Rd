@@ -12,7 +12,7 @@ aniVRips(
   filename = "VRComplexAni",
   title = "Animation of V-R Complex over Tau",
   description =
-    "This animation represents the creation of the V-R complex of some set \\n of data. Very cool!"
+    "This animation represents the creation of the V-R complex of some set of data. Very cool!"
 )
 }
 \arguments{

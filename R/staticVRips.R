@@ -14,10 +14,20 @@
 #'
 #' @return A plot of the Vietoris-Rips complex with given value tau and the barcode plot.
 #' 
+#' @import dplyr
+#' @import ggforce
+#' @import ggplot2
+#' @importFrom gridExtra grid.arrange
+#' @importFrom R.devices suppressGraphics
+#' @import TDA
+#' @import TDAstats
+#' 
 #' @export
 #'
 staticVRips <- function(df, tau, extra_thresh = 0.25, inc_barcode = FALSE,
                         png = FALSE, filename = "VRComplexStatic_plot",...){
+  
+  birth=death=xstart=ystart=xend=yend=x=y=group=NULL
   
   ph <- calculate_homology(df)
   
