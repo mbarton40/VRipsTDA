@@ -7,11 +7,9 @@
 staticVRips(
   df,
   tau,
-  extra_thresh = 0.25,
   inc_barcode = FALSE,
   png = FALSE,
-  filename = "VRComplexStatic_plot",
-  ...
+  filename = "VRComplexStatic_plot"
 )
 }
 \arguments{
@@ -19,15 +17,11 @@ staticVRips(
 
 \item{tau}{A value of to compute the Vietoris-Rips for.}
 
-\item{extra_thresh}{The additional threshold for the function to use when graphing the complex. This adjusts the bounds of the graph.}
-
 \item{inc_barcode}{If [TRUE], the image includes the persistence barcode plot.}
 
 \item{png}{If [TRUE], the png of the output is saved in the current directory.}
 
 \item{filename}{The name of the png file.}
-
-\item{...}{Additional parameters that can be passed through `ggsave()`}
 }
 \value{
 A plot of the Vietoris-Rips complex with given value tau and the barcode plot.

@@ -6,11 +6,9 @@
 #' 
 #' @param df A data frame with two columns to create the Vietoris-Rips from.
 #' @param tau A value of to compute the Vietoris-Rips for.
-#' @param extra_thresh The additional threshold for the function to use when graphing the complex. This adjusts the bounds of the graph.
 #' @param inc_barcode If [TRUE], the image includes the persistence barcode plot.
 #' @param png If [TRUE], the png of the output is saved in the current directory.
 #' @param filename The name of the png file.
-#' @param ... Additional parameters that can be passed through `ggsave()`
 #'
 #' @return A plot of the Vietoris-Rips complex with given value tau and the barcode plot.
 #' 
@@ -24,8 +22,8 @@
 #' 
 #' @export
 #'
-staticVRips <- function(df, tau, extra_thresh = 0.25, inc_barcode = FALSE,
-                        png = FALSE, filename = "VRComplexStatic_plot",...){
+staticVRips <- function(df, tau, inc_barcode = FALSE,
+                        png = FALSE, filename = "VRComplexStatic_plot"){
   
   birth=death=xstart=ystart=xend=yend=x=y=group=NULL
   
@@ -50,12 +48,8 @@ staticVRips <- function(df, tau, extra_thresh = 0.25, inc_barcode = FALSE,
   VRplot <- ggplot(data = df, aes(.data[[colnames(df)[1]]], .data[[colnames(df)[2]]])) +
     geom_point() +
     geom_circle(aes(x0 = .data[[colnames(df)[1]]], y0 = .data[[colnames(df)[2]]], r = tau), fill = NA, color = "blue") +
-    xlim(-max(taus_needed) - 10*extra_thresh, max(taus_needed) + 10*extra_thresh) +
-    ylim(-max(taus_needed) - 10*extra_thresh, max(taus_needed) + 10*extra_thresh) +
-    coord_quickmap() +
     theme_classic() +
-    annotate("text", label = paste("Tau =", tau), 
-             x = max(taus_needed) + 10*extra_thresh, y = -max(taus_needed) - 10*extra_thresh, vjust = 0, hjust = 1)
+    annotate("text", label = paste("Tau =", tau), x = Inf, y = -Inf, vjust = -1, hjust = 1)
   
   if(nrow(intersections) != 0){
     colnames(intersections) <- c('xstart', 'ystart', 'xend', 'yend')
