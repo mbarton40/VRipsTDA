@@ -47,7 +47,7 @@ staticVRips <- function(df, tau, extra_thresh = 0.25, inc_barcode = FALSE,
   triangles <- data.frame()
   
   # Initial plot if there are no segments. Followed by just the segments
-  VRplot <- ggplot(data = df, aes(.data[[colnames(df)[1]]], .data[[colnames(df)[2]]]))
+  VRplot <- ggplot(data = df, aes(.data[[colnames(df)[1]]], .data[[colnames(df)[2]]])) +
     geom_point() +
     geom_circle(aes(x0 = .data[[colnames(df)[1]]], y0 = .data[[colnames(df)[2]]], r = tau), fill = NA, color = "blue") +
     xlim(-max(taus_needed) - 10*extra_thresh, max(taus_needed) + 10*extra_thresh) +
