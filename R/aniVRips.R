@@ -57,9 +57,6 @@ aniVRips <- function(df, framerate, extra_thresh = 0.25, inc_barcode = FALSE, fi
       VRplot <- ggplot(data = df, aes(.data[[colnames(df)[1]]], .data[[colnames(df)[2]]]))
         geom_point() +
         geom_circle(aes(x0 = .data[[colnames(df)[1]]], y0 = .data[[colnames(df)[2]]], r = tau), fill = NA, color = "blue") +
-        xlim(-max(taus_needed) - 10*extra_thresh, max(taus_needed) + 10*extra_thresh) +
-        ylim(-max(taus_needed) - 10*extra_thresh, max(taus_needed) + 10*extra_thresh) +
-        coord_quickmap() +
         theme_classic() +
         annotate("text", label = paste("Tau =", tau), 
                  x = max(taus_needed) + 10*extra_thresh, y = -max(taus_needed) - 10*extra_thresh, vjust = 0, hjust = 1)
