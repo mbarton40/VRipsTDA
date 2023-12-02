@@ -7,7 +7,8 @@
 aniVRips(
   df,
   framerate,
-  extra_thresh = 0.25,
+  mintau,
+  maxtau,
   inc_barcode = FALSE,
   filename = "VRComplexAni",
   title = "Animation of V-R Complex over Tau",
@@ -16,11 +17,13 @@ aniVRips(
 )
 }
 \arguments{
-\item{df}{A data frame with two columns to create the Vietoris-Rips from}
+\item{df}{A data frame with two columns to create the Vietoris-Rips from.}
 
-\item{framerate}{The number of frames you want the animation to use}
+\item{framerate}{The number of frames you want the animation to use.}
 
-\item{extra_thresh}{The additional threshold for the function to use when graphing the complex. This adjusts the bounds of the graph.}
+\item{mintau}{The smallest tau value plotted.}
+
+\item{maxtau}{The largest tau value plotted.}
 
 \item{inc_barcode}{If [TRUE], the animation includes the persistence barcode plot.}
 

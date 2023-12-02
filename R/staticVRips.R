@@ -37,8 +37,6 @@ staticVRips <- function(df, tau, inc_barcode = FALSE,
   
   barcode_plot <- plot_barcode(ph_barcode_matrix)
   
-  taus_needed <- data.frame(taus_needed_nondf = sort(union(ph_df$death, ph_df$birth)))
-  
   # Calculate intersections and initiate triangles df
   
   intersections <- intersection(df, tau)
